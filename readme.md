@@ -1,5 +1,5 @@
 <p align=center>
-<img width="700" alt="bandoMIneDonI overview" src="https://github.com/3araht/bandominedoni/blob/main/pictures/bandominedoni.jpg">
+<img width="700" alt="bandoMIneDonI overview" src="https://github.com/3araht/bandominedoni/blob/main/pictures/bandoMIneDonI.jpg">
 </p>
 
 # bandoMIneDonI キーボード

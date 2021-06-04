@@ -58,6 +58,28 @@
     {   r55,   r45,   r36,   r25,   r37,   r46,   r56 }  \
 }
 
+// Alias layout macros that expand groups of keys.
+#define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
+
+//  Uncomment below if a pedal used for Open/Close is normally-on type (such as Yamaha's.)
+// #define PEDAL_NORMALLY_CLOSED
+
+#ifdef PEDAL_NORMALLY_CLOSED
+#   define MO_SWAP  MO(_OPEN)
+#   define DF_SWAP  DF(_CLOSE)
+#   define TG_SWAP  TG(_OPEN)
+#else
+#   define MO_SWAP  MO(_CLOSE)
+#   define DF_SWAP  DF(_OPEN)
+#   define TG_SWAP  TG(_CLOSE)
+#endif
+
+// Long press: go to _FN layer, tap: MUTE
+#define FN_MUTE  LT(_FN, KC_MUTE)
+#define DF_QWER  DF(_QWERTY)
+#define MIS_EIS  LT(_MISC,KC_LANG2)
+#define MIS_KAN  LT(_MISC,KC_LANG1)
+
 #define _________________QWERTY_L1_________________ KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
 #define _________________QWERTY_L2_________________ KC_A,    KC_S,    KC_D,    KC_F,    KC_G
 #define _________________QWERTY_L3_________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
@@ -84,6 +106,3 @@
 //  reason: bandoMIneDonI has no space on right hand side to use "SPLIT_HAND_MATRIX_GRID".
 //          However, It enables to decide the handedness by the HW by adding one condition: "not to press any keys (especially r30) dusing startup."
 bool is_keyboard_left(void);
-
-// Initial velocity value (avoid using 127 since it is used as a special number in some sound sources.)
-#define MIDI_INITIAL_VELOCITY 117

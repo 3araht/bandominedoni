@@ -281,7 +281,7 @@ https://github.com/qmk/qmk_firmware
 ./util/new_keyboard.sh
 ```
 下図の赤い文字にしたがって進めて行きます。こうすると、正式な手続きでbandoMIneDonI キーボードのフォルダが qmk_firmware/keyboards に出来上がります。  
-<img width="700" alt="new_keyboard" src="https://github.com/3araht/bandominedoni/blob/main/pictures/new_keyboard.png">  
+<img width="700" alt="new_keyboard" src="https://github.com/3araht/bandominedoni/blob/main/pictures/new_keyboard_bandominedoni.jpg">  
 
 また、これにより、qmk_firmware フォルダで  
 

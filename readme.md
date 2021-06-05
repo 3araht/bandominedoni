@@ -9,9 +9,9 @@ Makiko S さんにバンドネオンのイロハを教えていただいたお�
 幅は左右のキーボードともに約 20 cm。奥行きは約 10 cm です。
 左手側キーボードには、33 鍵 ＋ 1 鍵、右手側キーボードには、38 鍵 ＋ 2 鍵 あり、音階を割り当てることが可能です。
 さらに、モード切り替え用に右手側に 1鍵 あります（押しボタン機能付きロータリーエンコーダーを使う場合は省略可能。別の言い方をすれば、押しボタン機能の無いロータリーエンコーダもキースイッチと組み合わせて使うことで押しボタン機能を代用可能）。
-また、バンドネオンは押した時と引い時に音階の配列が変わります。それを表現するために以下の2通りの方法で切り替えが可能です。
-1、 上の余剰鍵をトグルスイッチとして用いる方法
-2、 サスティンペダルを流用し、開閉ペダルとして使う方法
+また、バンドネオンは押した時と引い時に音階の配列が変わります。それを表現するために以下の2通りの方法で切り替えが可能です。  
+1. 上の余剰鍵をトグルスイッチとして用いる方法  
+2. サスティンペダルを流用し、開閉ペダルとして使う方法
 
 キースイッチは Kailh Mid-height スイッチを使っています。
 バンドネオンの配列を再現するために、Cherry MXのひとまわり小さいキースイッチを使っているため、Cherry MX キースイッチは使えません。
@@ -41,7 +41,7 @@ iPad や iPhone で bandoMIneDonI を使う場合には電源が必要ですの�
 
 なお、USB-C タイプの iPad Air 4th Gen で試したところ、電源供給なしに問題なく動作させることができました。
 
-なんとQWERTY配列のキーボードとしても使用可能です。実は究極のレイアウトだったりして。。。  
+なんとQWERTY配列のキーボードとしても使用可能です。勝手にネオンスタッガード（Neon-Staggered）と呼んでます。。。  
 <p align=center>
 <img width="700" alt="bandoMIneDonI overview" src="https://github.com/3araht/bandominedoni/blob/main/pictures/QWERTY_on_bandoMIneDonI.png">
 </p>
@@ -119,7 +119,7 @@ When using it with an iPad or iPhone, it works when the adapter shown below is u
 Confirmed with an iPad Air 4th Gen, which has a USB-C port, it worked without the power supply.
 
 
-Surprisingly, bandoMIneDonI can be used as an QWERTY typing split-keyboard!!! Could be your end game keyboard!?!?
+Surprisingly, bandoMIneDonI can be used as an QWERTY typing split-keyboard!!! Dubbed "Neon-Staggered" layout.
 <p align=center>
 <img width="700" alt="bandoMIneDonI overview" src="https://github.com/3araht/bandominedoni/blob/main/pictures/QWERTY_on_bandoMIneDonI.png">
 </p>

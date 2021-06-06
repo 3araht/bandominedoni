@@ -26,7 +26,8 @@ enum layer_names {
 #endif
     _QWERTY,
     _MISC,
-    _FN
+    _FN,
+    _RESERVE
 };
 
 // Alias layout macros that expand groups of keys.
@@ -104,10 +105,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX \
+            RGB_SAD, RGB_SAI, RGB_HUD, RGB_HUI, RGB_SPD, RGB_SPI, RGB_VAD, RGB_VAI, \
+          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_RMOD, RGB_MOD, EEP_RST, RGB_TOG \
     )
 };
+
+void eeconfig_init_user(void) {  // EEPROM is getting reset!
+  #ifdef RGB_MATRIX_ENABLE
+  rgb_matrix_enable();
+  rgb_matrix_set_speed(RGB_MATRIX_STARTUP_SPD);
+  rgb_matrix_sethsv(HSV_BLUE);
+
+  rgb_matrix_mode(RGB_MATRIX_SOLID_REACTIVE);
+  // rgb_matrix_mode(RGB_MATRIX_RAINBOW_MOVING_CHEVRON);
+  #endif
+}
 
 void keyboard_post_init_user(void) {
     //  Set octave to MI_OCT_0
@@ -116,6 +128,46 @@ void keyboard_post_init_user(void) {
     // avoid using 127 since it is used as a special number in some sound sources.
     midi_config.velocity = MIDI_INITIAL_VELOCITY;
 };
+
+#ifdef RGB_MATRIX_ENABLE
+void rgb_matrix_indicators_user(void) {
+    if (rgb_matrix_is_enabled()) {  // turn the lights on when it is enabled.
+        uint8_t layer = biton32(layer_state);
+        switch (layer) {
+            case _CLOSE:
+                // rgb_matrix_set_color(pgm_read_byte(&convert_led_location2number[11]),  RGB_RED);         //  RGB_TOG  <- too heavy.
+
+                // Close state indicator
+                rgb_matrix_set_color( 0, RGB_DARKWHITE);     //  oc
+                break;
+
+            case _FN:
+                // rgb_matrix_set_color(pgm_read_byte(&convert_led_location2number[11]),  RGB_RED);         //  RGB_TOG  <- too heavy.
+                rgb_matrix_set_color(14, RGB_DARKYELLOW);      //  MI_OCTD
+                rgb_matrix_set_color(25, RGB_DARKGREEN);       //  MI_OCTU
+                rgb_matrix_set_color(14, RGB_DARKYELLOW);      //  MI_VELD
+                rgb_matrix_set_color(25, RGB_DARKGREEN);       //  MI_VELU
+
+                rgb_matrix_set_color( 6, RGB_DARKBLUE);        //  RGB_SAD
+                rgb_matrix_set_color( 9, RGB_DARKBLUE);        //  RGB_SAI
+                rgb_matrix_set_color(18, RGB_DARKBLUE);        //  RGB_HUD
+                rgb_matrix_set_color(21, RGB_DARKBLUE);        //  RGB_HUI
+                rgb_matrix_set_color(29, RGB_DARKBLUE);        //  RGB_SPD
+                rgb_matrix_set_color(32, RGB_DARKBLUE);        //  RGB_SPI
+                rgb_matrix_set_color(36, RGB_DARKBLUE);        //  RGB_VAD
+                rgb_matrix_set_color(39, RGB_DARKBLUE);        //  RGB_VAI
+
+                rgb_matrix_set_color(31, RGB_DARKBLUE);        //  RGB_RMOD
+                rgb_matrix_set_color(37, RGB_DARKBLUE);        //  RGB_MOD
+                rgb_matrix_set_color(38, RGB_DARKPINK);        //  EEP_RST
+                rgb_matrix_set_color(40, RGB_DARKRED);         //  RGB_TOG
+
+                rgb_matrix_set_color(41, RGB_DARKORANGE);      //  _FN
+                break;
+        }
+    }
+}
+#endif
 
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise){

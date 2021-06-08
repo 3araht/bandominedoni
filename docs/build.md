@@ -294,14 +294,27 @@ make bandominedoni:default
 
 などのコンパイルも通るようになります。
 
+
 3. 暫定的に UP している[こちら](https://github.com/3araht/bandominedoni/blob/main/temp/qmk_firmware/keyboards/bandominedoni)のソースコードを qmk_firmware/keyboards/bandominedoni に上書き保存します。
 
 
+##### 開閉ペダルの極性がノーマリオンタイプの場合 #####
+デフォルトではノーマリオフタイプのペダルを想定していますが、ノーマリオンタイプ（ヤマハやローランド製のものなど）を使用する場合、
+chromatonimini.h の 以下の1行をコメントアウトしてコンパイルしてください。
+これにより、ノーマリオンタイプのペダルが使えるようになります。
+
+```
+#define PEDAL_NORMALLY_CLOSED
+```
+
+
 #### layers ####
+REMAP さまさまですが、REMAPで生成したレイヤー情報は以下の通りです。
 
-***音階レイヤーは準備中***
+<img width="700" alt="Layer" src="https://github.com/3araht/bandominedoni/blob/main/pictures/keymap_cheatsheet_bandominedoni.png">    
 
-エンコーダボタン長押ししたときの様子 Function(FN) Layer  
+
+Function(FN) Layer は、エンコーダボタン長押しで遷移します。  
 <img width="700" alt="Layer" src="https://github.com/3araht/bandominedoni/blob/main/pictures/20210606_bandominedoni_FN_layer.png">    
 
 

@@ -157,7 +157,22 @@ TRRS コネクタを図のように実装します。
 
 コンスルーを Pro Micro に実装した様子  
 <img width="700" alt="CT" src="https://github.com/3araht/bandominedoni/blob/main/pictures/ProMicro_TxD_r02.jpg">    
-<img width="700" alt="CT" src="https://github.com/3araht/bandominedoni/blob/main/pictures/ProMicro_front_r02.jpg">    
+<img width="700" alt="CT" src="https://github.com/3araht/bandominedoni/blob/main/pictures/ProMicro_front_r02.jpg">      
+
+### (2021/06/27 追記) ProMicro を基板に実装する際に、コネクタ部を絶縁します。
+
+これは、コネクタ部が基板と当たり、使っているうちに擦れて基板のレジストに穴が空き、そこからショートしてしまった場合に電源が入らなくなる、という問題を回避するためです( chromatonemini で発生しました)。  
+（下に紹介する写真は chromatonemini のものになります。ご了承ください。）  
+<img width="700" alt="SnakeBite" src="https://github.com/3araht/bandominedoni/blob/main/pictures/SnakeBite_failure.jpg">  
+
+このように、スネークバイトのような跡がつき、そこからProMicro のコネクタと基板の 5V がショートしてしまっていました。  
+<img width="700" alt="SnakeBite" src="https://github.com/3araht/bandominedoni/blob/main/pictures/SnakeBite.jpg">  
+
+基板にカプトンテープを貼って絶縁します。  
+<img width="700" alt="SnakeBite" src="https://github.com/3araht/bandominedoni/blob/main/pictures/SnakeBiteInsulated.jpg">  
+
+ProMicro の方にもカプトンテープを貼って絶縁します。  
+<img width="700" alt="SnakeBite" src="https://github.com/3araht/bandominedoni/blob/main/pictures/ProMicroInsulated.jpg">  
 
 
 ## 5 ##

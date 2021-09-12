@@ -316,6 +316,17 @@ make bandominedoni:default
 3. 暫定的に UP している[こちら](https://github.com/3araht/bandominedoni/blob/main/temp/qmk_firmware/keyboards/bandominedoni)のソースコードを qmk_firmware/keyboards/bandominedoni に上書き保存します。
 
 
+4. サスティン問題回避  
+MIDIソフトによっては、同じ音を重ねて鳴らしたときにその音にUSBケーブルを抜き差しするまでサスティンがかかってしまう現象がありました。
+~~対策方法がわかりましたので、それを適用します（こちらも pull request 中。正式に採用されるまでの暫定対策）。~~  
+2020/10/5 pull request が メインブランチにマージされました。最新のソフトを clone いただければOKです。  
+2021/04/13 残念ながら、2021/3/25 の process_midi.c の更新により、再びこの問題が復活しています。
+コンパイル前に以下のコマンドでエンバグ前のコードを引っ張り出してコンパイルしてください。
+```
+git checkout c66df16 quantum/process_keycode/process_midi.c
+```
+
+
 ##### 開閉ペダルの極性がノーマリオンタイプの場合 #####
 デフォルトではノーマリオフタイプのペダルを想定していますが、ノーマリオンタイプ（ヤマハやローランド製のものなど）を使用する場合、
 chromatonimini.h の 以下の1行をコメントアウトしてコンパイルしてください。

@@ -38,7 +38,7 @@
     l40, l41, l42, l43, l44, l45, l46, l47,  \
     \
     oc,         r00, r01, r02, r03,         fn, \
-             r10, r11, r12, r13, r14, \
+             r10, r11, r12, r13, r14,      ccw, cw,\
            r20, r21, r22, r23, r24, r25, \
     r30, r31, r32, r33, r34, r35, r36, r37, \
       r40, r41, r42, r43, r44, r45, r46, r47, \
@@ -49,7 +49,7 @@
     {   l20,   l21,   l22,   l23,   l24,   l25,   l26 }, \
     {   l30,   l31,   l32,   l33,   l34,   l35,   l36 }, \
     {   l41,   l42,   l43,   l44,   l45,   l46,   l47 }, \
-    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,   ccw,    cw }, \
     {   r50,   r40,   r31,   r20,   r10,   r00,   r30 }, \
     {   r51,   r41,   r32,   r21,   r11,   r01,    oc }, \
     {   r52,   r42,   r33,   r22,   r12,   r02,    fn }, \
@@ -77,27 +77,6 @@
 #define MIS_EIS  LT(_MISC,KC_LANG2)
 #define MIS_KAN  LT(_MISC,KC_LANG1)
 
-#define _________________QWERTY_L1_________________ KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
-#define _________________QWERTY_L2_________________ KC_A,    KC_S,    KC_D,    KC_F,    KC_G
-#define _________________QWERTY_L3_________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
-
-#define _________________QWERTY_R1_________________ KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
-#define _________________QWERTY_R2_________________ KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
-#define _________________QWERTY_R3_________________ KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
-
-#define _________________COLEMAK_L1________________ KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
-#define _________________COLEMAK_L2________________ KC_A,    KC_R,    KC_S,    KC_T,    KC_D
-#define _________________COLEMAK_L3________________ KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
-
-#define _________________COLEMAK_R1________________ KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN
-#define _________________COLEMAK_R2________________ KC_H,    KC_N,    KC_E,    KC_I,    KC_O
-#define _________________COLEMAK_R3________________ KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH
-
-#define _________________NUMBER_L__________________ KC_1,    KC_2,    KC_3,    KC_4,    KC_5
-// #define _________________NUMBER_R__________________ KC_6,    KC_7,    KC_8,    KC_9,    KC_0
-
-#define _________________FUNC__L___________________ KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5
-// #define _________________FUNC__R___________________ KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10
 
 //  Overriding is_keyboard_left() in qmk_firmware/quantum/split_common/split_util.c to limit the handedness check only once.
 //  reason: bandoMIneDonI has no space on right hand side to use "SPLIT_HAND_MATRIX_GRID".

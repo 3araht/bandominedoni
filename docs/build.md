@@ -286,35 +286,12 @@ https://github.com/qmk/qmk_toolbox
 以下を参考に書き込んでください。または、QMKで検索すると書き込み方がすぐに出てくるはずです。  
 https://docs.qmk.fm/#/getting_started_build_tools
 
-bandoMIneDonI の Firmware は以下にUPされるよう push request 中です(まだリンク切れ状態です)。  
-https://github.com/qmk/qmk_firmware/tree/main/keyboards/bandominedoni
-
-それまで、暫定的に[こちら](https://github.com/3araht/bandominedoni/blob/main/temp/qmk_firmware/keyboards/bandominedoni)のソースコードをお使いください。
+bandoMIneDonI の Firmware は 2021/9/22、以下にUPされました！！！
+https://github.com/qmk/qmk_firmware/tree/master/keyboards/bandominedoni
 
 #### 9.2.1 ####
-#### 暫定的にUPしたソースの使い方 ####
 1. まず、qmk_firmware を clone してきます。
 https://github.com/qmk/qmk_firmware
-
-2. qmk_firmware/util/new_keyboard.sh を使って bandoMIneDonI キーボード を新規登録します。以下のコマンドでスクリプトを実行します。  
-このコマンドは qmk_firmware フォルダで実行します。  
-```
-./util/new_keyboard.sh
-```
-下図の赤い文字にしたがって進めて行きます。こうすると、正式な手続きでbandoMIneDonI キーボードのフォルダが qmk_firmware/keyboards に出来上がります。  
-<img width="700" alt="new_keyboard" src="https://github.com/3araht/bandominedoni/blob/main/pictures/new_keyboard_bandominedoni.jpg">  
-
-また、これにより、qmk_firmware フォルダで  
-
-```
-make bandominedoni:default
-```
-
-などのコンパイルも通るようになります。
-
-
-3. 暫定的に UP している[こちら](https://github.com/3araht/bandominedoni/blob/main/temp/qmk_firmware/keyboards/bandominedoni)のソースコードを qmk_firmware/keyboards/bandominedoni に上書き保存します。
-
 
 4. サスティン問題回避  
 MIDIソフトによっては、同じ音を重ねて鳴らしたときにその音にUSBケーブルを抜き差しするまでサスティンがかかってしまう現象がありました。
@@ -325,7 +302,6 @@ MIDIソフトによっては、同じ音を重ねて鳴らしたときにその�
 ```
 git checkout c66df16 quantum/process_keycode/process_midi.c
 ```
-
 
 ##### 開閉ペダルの極性がノーマリオンタイプの場合 #####
 デフォルトではノーマリオフタイプのペダルを想定していますが、ノーマリオンタイプ（ヤマハやローランド製のものなど）を使用する場合、

@@ -55,10 +55,8 @@ BOOTH では、bandoMIneDonI の他、クロマチックボタンアコーディ
 
 # ファームウェア
 
-bandoMIneDonI は QMK firmware を使っています。Push request が通れば下記からダウンロードできると思います:
-[QMK - bandoMIneDonI directory](https://github.com/qmk/qmk_firmware/tree/main/keyboards/bandominedoni)。
-
-暫定的に [こちら](https://github.com/3araht/bandominedoni/blob/main/temp/qmk_firmware/keyboards/bandominedoni) からベータ版をダウンロード下さい。
+bandoMIneDonI は QMK firmware を使っています。  
+[QMK - bandoMIneDonI directory](https://github.com/qmk/qmk_firmware/tree/master/keyboards/bandominedoni)。
 
 もしくは、こちらのコンパイル済の [hex file](https://github.com/3araht/bandominedoni/blob/main/bandominedoni_led_hex.zip) をお使いください （RGB_MATRIX 有効）.
 

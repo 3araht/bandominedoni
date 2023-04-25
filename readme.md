@@ -3,17 +3,15 @@
 </p>
 
 # bandoMIneDonI キーボード
-bandoMIneDonI （バンドミネドーニ）キーボードは蛇腹の無いバンドネオンの MIDI キーボードです。  
+bandoMIneDonI （バンドミネドーニ）キーボードは蛇腹の無いバンドネオンの MIDI キーボードです。
 Makiko S さんにバンドネオンのイロハを教えていただいたおかげで bandoMIneDonI が出来上がりました。感謝致します。
 
 幅は左右のキーボードともに約 20 cm。奥行きは約 10 cm です。
 左手側キーボードには、33 鍵 ＋ 1 鍵、右手側キーボードには、38 鍵 ＋ 2 鍵 あり、音階を割り当てることが可能です。
 さらに、モード切り替え用に右手側に 1鍵 あります（押しボタン機能付きロータリーエンコーダーを使う場合は省略可能。別の言い方をすれば、押しボタン機能の無いロータリーエンコーダもキースイッチと組み合わせて使うことで押しボタン機能を代用可能）。
-また、バンドネオンは押した時と引い時に音階の配列が変わります。それを表現するために以下の2通りの方法で切り替えが可能です。  
-1. 上の余剰鍵をトグルスイッチとして用いる方法  
+また、バンドネオンは押した時と引い時に音階の配列が変わります。それを表現するために以下の2通りの方法で切り替えが可能です。
+1. 上の余剰鍵をトグルスイッチとして用いる方法
 2. サスティンペダルを流用し、開閉ペダルとして使う方法(※1)
-
-### (※1) 注意点： 2021/9/4 現在、押し引きで音が変わるのを再現するためにはレイヤー切り替え作戦をイメージしておりました。しかし、この作戦はうまく行かないようです。レイヤーの切り替えだけでは、押しっぱなしにしている音階キーが押され直さないようです。もともとQMK Firmware はタイピングキーボード用に設計されているので、そういう仕様なのだと思います。 レイヤー切り替えてからボタンを押しなおせば想定通りの音は出せます。###
 
 キースイッチは Kailh Mid-height スイッチを使っています。
 バンドネオンの配列を再現するために、Cherry MXのひとまわり小さいキースイッチを使っているため、Cherry MX キースイッチは使えません。
@@ -22,20 +20,20 @@ Makiko S さんにバンドネオンのイロハを教えていただいたお�
 キーキャップもキースイッチ同様、かなり小さめのタイプが必要です。
 バンドネオンのキーレイアウトをできるだけ忠実に再現するため、Kailh Mid-Height スイッチをかなり密に配置しています。
 そのため、通常のCherry MX用の1Uキーキャップは大きすぎて使えません。nekoka さんの「OYKキーキャップ1Ux80個(MidHeightスイッチ 13x13mmキーピッチ用) https://make.dmm.com/item/1317194/ 」など、13 mm 角に収まるサイズのキーキャップが必要になります。
-こちらもご注意ください。  
+こちらもご注意ください。
 
-左右のキーボードの接続には、LANケーブルを使います。細身タイプのケーブルがお勧めです。  
+左右のキーボードの接続には、LANケーブルを使います。細身タイプのケーブルがお勧めです。
 
-ロータリーエンコーダは長押しでモード切り替えレイヤーへ。短押しでミュート切り替え、回転させるとシステム音量の調整に使用することが可能です。  
+ロータリーエンコーダは長押しでモード切り替えレイヤーへ。短押しでミュート切り替え、回転させるとシステム音量の調整に使用することが可能です。
 
-蛇腹の開閉代わりに使うサスティンペダルの接続にはミニジャックを使います。  
-そのため、サスティンペダルのジャックをミニジャックに変換するアダプターが必要です。  
+蛇腹の開閉代わりに使うサスティンペダルの接続にはミニジャックを使います。
+そのため、サスティンペダルのジャックをミニジャックに変換するアダプターが必要です。
 
 オプションにより、LED を搭載すれば写真のようにバックライト点灯させることが可能です（LEDのハンダ付けは難易度が高いので、ご注意ください。キースイッチが小さいため、SK6812mini-Eにのみ対応しています）。
 全部で左手側に34個、右手側に 42個（上記のキースイッチの分 40個 + 機能切り替えスイッチ（ロータリーエンコーダーかキースイッチのいずれかが選択可能）とペダル用に一つずつ）、合計76個取り付け可能です。
 蛇腹の閉じる／開くの状態表示を兼任しているペダル用のLED一つだけつける事も可能です。
 
-bandoMIneDonI は PC / Mac / iPad / iPhone / Android などで動作します。  
+bandoMIneDonI は PC / Mac / iPad / iPhone / Android などで動作します。
 
 コネクタが Lightning タイプの iPad や iPhone で使う場合、下記に示すアダプターを使って電源供給しながら使えることを確認しています。
 iPad や iPhone で bandoMIneDonI を使う場合には電源が必要ですので、必ず "[Lightning - USB 3カメラアダプタ](https://www.apple.com/jp/shop/product/MK0W2AM/A/)" をお使いください。
@@ -43,19 +41,19 @@ iPad や iPhone で bandoMIneDonI を使う場合には電源が必要ですの�
 
 なお、USB-C タイプの iPad Air 4th Gen で試したところ、電源供給なしに問題なく動作させることができました。
 
-なんとQWERTY配列のキーボードとしても使用可能です。勝手にネオンスタッガード（Neon-Staggered）と呼んでます。。。  
+なんとQWERTY配列のキーボードとしても使用可能です。勝手にネオンスタッガード（Neon-Staggered）と呼んでます。。。
 <p align=center>
 <img width="700" alt="bandoMIneDonI overview" src="https://github.com/3araht/bandominedoni/blob/main/pictures/QWERTY_on_bandoMIneDonI.png">
 </p>
 
 # キーボードキット
-bandoMIneDonI キーボードキットは BOOTH でお求めいただけます。  
+bandoMIneDonI キーボードキットは BOOTH でお求めいただけます。
 [BOOTH 販売ページへのリンクはこちら](https://3araht.booth.pm/)。
 BOOTH では、bandoMIneDonI の他、クロマチックボタンアコーディオンを模した MIDIキーボードの giabalanai、 giabaLEnai、giabaRInai、giabaRInaix2 やクロマトーンを模した chromatonemini のキーボードキットがお求めいただけます。
 
 # ファームウェア
 
-bandoMIneDonI は QMK firmware を使っています。  
+bandoMIneDonI は QMK firmware を使っています。
 [QMK - bandoMIneDonI directory](https://github.com/qmk/qmk_firmware/tree/master/keyboards/bandominedoni)。
 
 もしくは、こちらのコンパイル済の [hex file](https://github.com/3araht/bandominedoni/blob/main/bandominedoni_led_hex.zip) をお使いください （RGB_MATRIX 有効）.
@@ -65,12 +63,12 @@ bandoMIneDonI は QMK firmware を使っています。
 [日本語ビルドガイド](https://github.com/3araht/bandominedoni/blob/main/docs/build.md)
 
 # コンタクト先:
-Twitter と YouTube はじめました。  
-http://twitter.com/3araht  
+Twitter と YouTube はじめました。
+http://twitter.com/3araht
 https://www.youtube.com/channel/UC0zYtYMoxb0P7S8DPAkl0zA/
 
 ## その他
-#### bandoMIneDonI の名前の由来  
+#### bandoMIneDonI の名前の由来
 bandoneon MIDI
 
 bando MI ne D on I
@@ -97,7 +95,7 @@ Make sure to use Kailh Mid-height switches.
 
 As same as keyswitches, keycaps are also tiny.
 Standard 1U types are not available for the keyboards.
-nekoka's 13 mm x 13 mm round keycaps are used in the demo unit.  
+nekoka's 13 mm x 13 mm round keycaps are used in the demo unit.
 https://make.dmm.com/item/1317194/
 
 LAN cable is used for wiring both left and right hand side keyboards.
@@ -114,7 +112,7 @@ One LED as an indicator of the Open/Close can be mounted alone, or all 76 of the
 
 bandoMIneDonI works with PC, Mac, iPad, iPhone, and Android.
 
-When using it with an iPad or iPhone, it works when the adapter shown below is used with a power supply. The power supply is necessary to use bandoMIneDonI on iPad and iPhone. Make sure to use "[Lightning to USB 3 Camera Adapter](https://www.apple.com/shop/product/MK0W2AM/A/)", not "Lightning to USB Camera Adapter."  
+When using it with an iPad or iPhone, it works when the adapter shown below is used with a power supply. The power supply is necessary to use bandoMIneDonI on iPad and iPhone. Make sure to use "[Lightning to USB 3 Camera Adapter](https://www.apple.com/shop/product/MK0W2AM/A/)", not "Lightning to USB Camera Adapter."
 
 Confirmed with an iPad Air 4th Gen, which has a USB-C port, it worked without the power supply.
 
@@ -125,7 +123,7 @@ Surprisingly, bandoMIneDonI can be used as an QWERTY typing split-keyboard!!! Du
 </p>
 
 # Keyboard kit
-The keyboard kit is available from [BOOTH](https://3araht.booth.pm/).  
+The keyboard kit is available from [BOOTH](https://3araht.booth.pm/).
 There are chromatic button accordion-ish MIDI keyboard kit giabalanai, giabaLEnai, giabaRInai, and giabaRInaix2 and chromatone MIDI keyboard kit chromatonemini as well.
 
 Click [here](https://www.tenso.com/en/static/lp_shop_booth) for BOOTH overseas shipping!
@@ -141,13 +139,13 @@ Or, use this pre-compiled [hex file](https://github.com/3araht/bandominedoni/blo
 
 # Build Guide
 
-[Japanese Build Guide](https://github.com/3araht/bandominedoni/blob/main/docs/build.md)  
+[Japanese Build Guide](https://github.com/3araht/bandominedoni/blob/main/docs/build.md)
 Try [Google Translated guide](https://translate.google.com/translate?sl=ja&tl=en&u=https://github.com/3araht/bandominedoni/blob/main/docs/build.md) for your language preferences. Trust me, it works quite well, more than expected.
 
 
 # Contact
-If you need any help, you know where to find me.  
-http://twitter.com/3araht  
+If you need any help, you know where to find me.
+http://twitter.com/3araht
 https://www.youtube.com/channel/UC0zYtYMoxb0P7S8DPAkl0zA/
 
 ## Miscellaneous

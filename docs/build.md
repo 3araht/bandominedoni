@@ -178,19 +178,22 @@ ProMicro の方にもカプトンテープを貼って絶縁します。<br>
 ## 5 ##
 ## Firmwareの書き込み ##
 とりあえず動作確認用にファームを書き込みます。
-LEDが光るHEXファイル(bandominedoni_led.hex)は[こちら](https://github.com/3araht/bandominedoni/blob/main/bandominedoni_led_hex.zip)からダウンロードできます。<br>
+LEDが光るHEXファイル(bandominedoni_led.hex)を使います。<br>
 
-初めての方はHEXファイルの書き込みに以下のツールを使うことをお勧めします。<br>
+Remap を使うととても簡単に Promicro にファームウェアを書き込むことが可能です。
 
-普通の Pro Micro をお使いの場合は Pro Micro Web Updater<br>
-https://sekigon-gonnoc.github.io/promicro-web-updater/index.html
-※ どうやら、 Pro Micro を書き込む際に、素早くやらないと、Verify の完了まで行かないようです。<br>
-必ず、ログを確認し、書き込みのみならず Verify まで完了していることを確認しておいてください。
+Remap Catalog から、 bandominedoni キーボードを探します。<br>
+<img width="700" alt="RemapKeyboardCatalog" src="https://github.com/3araht/bandominedoni/blob/main/pictures/RemapKeyboardCatalog.png"><br>
 
-Elite-C をお使いの場合は QMK Toolbox<br>
-https://github.com/qmk/qmk_toolbox
+<img width="700" alt="Remap_bandominedoni" src="https://github.com/3araht/bandominedoni/blob/main/pictures/Remap_bandominedoni.png"><br>
 
-これらの使い方は サリチル酸さんの[記事](https://salicylic-acid3.hatenablog.com/entry/qmk-toolbox)がとても参考になります(サリチル酸さん、どうもありがとうございます)。
+書き込むファームウェアを選択します。<br>
+<img width="700" alt="RemapFirmwareSelect" src="https://github.com/3araht/bandominedoni/blob/main/pictures/RemapFirmwareSelect.png"><br>
+
+Elite-C をお使いの場合は bootloader として dfu を、それ以外の場合は caterina を選択してファームウェアを書き込みます。書き込み方の詳細は画面に示されている手順に従ってください。<br>
+<img width="700" alt="RemapFlash" src="https://github.com/3araht/bandominedoni/blob/main/pictures/RemapFlash.png"><br>
+
+他の書き込み方も色々あります。サリチル酸さんの[記事](https://salicylic-acid3.hatenablog.com/entry/qmk-toolbox)がとても参考になります(サリチル酸さん、どうもありがとうございます)。
 
 
 ## 6 ##
@@ -260,25 +263,13 @@ LED を穴にいれたら、端子の上に半田を盛って半田付けして�
 
 ## 9 ##
 ## Firmwareの書き込み ##
-4 で書き込みが完了していなかった場合にはここでファームウェアを書き込みます。
+5 で書き込みが完了していなかった場合にはここでファームウェアを書き込みます。
 
 
 ### 9.1 ###
 ### コーディングはちょっと自信がない／とりあえず動作させたい、という方 ###
+[こちら](#5)を参考にファームウェアを書き込んでください。
 
-LEDが光るHEXファイル(bandominedoni_led.hex)は[こちら](https://github.com/3araht/bandominedoni/blob/main/bandominedoni_led_hex.zip)からダウンロードできます。<br>
-
-初めての方はHEXファイルの書き込みに以下のツールを使うことをお勧めします。<br>
-
-普通の Pro Micro をお使いの場合は Pro Micro Web Updater<br>
-https://sekigon-gonnoc.github.io/promicro-web-updater/index.html
-※ どうやら、 Pro Micro を書き込む際に、素早くやらないと、Verify の完了まで行かないようです。<br>
-必ず、ログを確認し、書き込みのみならず Verify まで完了していることを確認しておいてください。
-
-Elite-C をお使いの場合は QMK Toolbox<br>
-https://github.com/qmk/qmk_toolbox
-
-これらの使い方は サリチル酸さんの[記事](https://salicylic-acid3.hatenablog.com/entry/qmk-toolbox)がとても参考になります(サリチル酸さん、どうもありがとうございます)。
 
 ### 9.2 ###
 ### コーディングに慣れている方、チャレンジされる方 ###
@@ -297,15 +288,15 @@ https://github.com/qmk/qmk_firmware
 MIDIソフトによっては、同じ音を重ねて鳴らしたときにその音にUSBケーブルを抜き差しするまでサスティンがかかってしまう現象がありました。
 ~~対策方法がわかりましたので、それを適用します（こちらも pull request 中。正式に採用されるまでの暫定対策）。~~<br>
 2020/10/5 pull request が メインブランチにマージされました。最新のソフトを clone いただければOKです。<br>
-2021/04/13 残念ながら、2021/3/25 の process_midi.c の更新により、再びこの問題が復活しています。
-コンパイル前に以下のコマンドでエンバグ前のコードを引っ張り出してコンパイルしてください(qmk_firmware のバージョンが 0.18.16以前の場合)。
-```
-git checkout c66df16 quantum/process_keycode/process_midi.c
-```
+2021/04/13 残念ながら、2021/3/25 の process_midi.c の更新により、再びこの問題が復活しています。<br>
+2023/09/23 以下の Pull Request から下記ファイルを取得し、`process_midi.c` を差し替えてください。
 
-0.18.17 以降の qmk_firmware をお使いの場合は、上記のファイルだと MI_SUS の宣言が変更になったためエラーになるので、
-以下のファイルをダウンロードして、ローカルの quantum/process_keycode/process_midi.c　を上書きしてください。
-https://github.com/3araht/qmk_firmware/blob/d30b4e29016f651ab31ac018bcea424250dc522d/quantum/process_keycode/process_midi.c
+https://github.com/qmk/qmk_firmware/pull/22114
+https://github.com/qmk/qmk_firmware/blob/e8906ed2ea0b9f20291b2759d4d65fc6c334ab39/quantum/process_keycode/process_midi.c
+
+```
+quantum/process_keycode/process_midi.c
+```
 
 
 ##### 開閉ペダルの極性がノーマリオンタイプの場合 #####

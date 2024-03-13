@@ -119,6 +119,8 @@ TRRS コネクタを図のように実装します。<br>
 <img width="700" alt="TRRS" src="https://github.com/3araht/bandominedoni/blob/main/pictures/right_jumper_SJ3.jpg"><br>
 
 右手側のリセットボタンの足が、あとで実装する LAN コネクタと干渉するため、リセットボタンの足を切ってから半田付けします。<br>
+※ rev.04 の基板ではこの問題は解消していますので、3、へ進んでください。<br>
+
 <img width="700" alt="ResetSW" src="https://github.com/3araht/bandominedoni/blob/main/pictures/RESETsw_soldering_right1.jpg"><br>
 <img width="700" alt="ResetSW" src="https://github.com/3araht/bandominedoni/blob/main/pictures/RESETsw_soldering_right2.jpg"><br>
 <img width="700" alt="ResetSW" src="https://github.com/3araht/bandominedoni/blob/main/pictures/RESETsw_soldering_right3.jpg"><br>

@@ -318,8 +318,34 @@ REMAP さまさまですが、REMAPで生成したレイヤー情報は以下の
 
 
 Function(FN) Layer は、エンコーダボタン長押しで遷移します。<br>
-<img width="700" alt="Layer" src="https://github.com/3araht/bandominedoni/blob/main/pictures/20210606_bandominedoni_FN_layer.png"><br>
+<img width="700" alt="Layer" src="https://github.com/3araht/bandominedoni/blob/main/pictures/20240407_bandominedoni_FN_layer.png"><br>
 
+機能一覧
+| ボタン名 |  機能  |  備考  |
+|--------|-------|-------|
+|Default layout|基本のMIDIレイアウト||
+|QWERTY|QWERTY 配列（タイピングキーボード）||
+|COLEMAK|Colemak 配列（タイピングキーボード）||
+|unswap MetaAlt|Meta と Alt キーをスワップしない|For Windows?|
+|Swap MetaAlt|Meta と Alt キーをスワップ|For Mac?|
+|OCTD|オクターブを下げる||
+|OCTU|オクターブを上げる||
+|VELD|ベロシティを下げる||
+|VELU|ベロシティを上げる||
+|TGLCHGR|TogGLe CHannel GRoup |デフォルトでは 右手側も左手側も Ch1。 このキーでモードをトグルすると、左手側は Ch2 に。|
+|VERSION|ファームウェアバージョンを出力||
+|SAD|Saturation down||
+|SAI|Saturation up||
+|HUD|Hue down||
+|HUI|Hue up||
+|SPD|Speed down||
+|SPU|Speed up||
+|VAD|Brightness down||
+|VAU|Brightness up||
+|RMOD|LED モードを逆周りに変更||
+|MOD|LED モードを変更 ||
+|RST|設定初期化||
+|TOG|LED On Off の切り替え||
 
 ## 10 ##
 ## チェックポイント ##
